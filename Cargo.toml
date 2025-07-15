@@ -1,0 +1,27 @@
+[package]
+name = "android-template"
+version = "1.0.0"
+authors = ["uAtomicBoolean <uatomicboolean@proton.me>"]
+edition = "2021"
+build = "build.rs"
+publish = false
+license = "MIT"
+
+[dependencies]
+slint = { version = "^1.12.0", features = ["backend-android-activity-06"] }
+
+[build-dependencies]
+slint-build = { version = "^1.12.0" }
+
+[lib]
+crate-type = ["cdylib"]
+path = "src/lib.rs"
+
+# Andoroid settings
+# See more: https://github.com/rust-mobile/cargo-apk?tab=readme-ov-file#manifest
+[package.metadata.android]
+package = "dev.slint.android.template"
+build_targets = ["aarch64-linux-android"]
+
+[package.metadata.android.application]
+label = "Android Template"

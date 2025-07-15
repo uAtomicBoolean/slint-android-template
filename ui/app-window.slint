@@ -1,0 +1,47 @@
+import { Button } from "std-widgets.slint";
+
+
+export component AppWindow inherits Window {
+    in-out property <int> counter: 0;
+    title: "Android template";
+    default-font-size: 14px;
+
+    VerticalLayout {
+        alignment: center;
+        spacing: 4px;
+        HorizontalLayout {
+            alignment: center;
+            Text {
+                text: "Counter: \{counter}";
+            }
+        }
+
+        HorizontalLayout {
+            alignment: center;
+            spacing: 4px;
+            Button {
+                text: "Decrement";
+                primary: true;
+                clicked => {
+                    counter -= 1;
+                }
+            }
+
+            Button {
+                text: "Reset";
+
+                clicked => {
+                    counter = 0;
+                }
+            }
+
+            Button {
+                text: "Increment";
+                primary: true;
+                clicked => {
+                    counter += 1;
+                }
+            }
+        }
+    }
+}
