@@ -1,5 +1,10 @@
 # Slint Android template
-A basic template to develop android applications using Slint and Rust.  
+A basic template to develop android applications using Slint and Rust.
+
+**Execute the project:**
+```sh
+cargo apk run --target aarch64-linux-android --lib
+```
 
 **Useful links:**
 - [slint documentation](https://docs.slint.dev/latest/docs/rust/slint/android/)
